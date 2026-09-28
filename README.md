@@ -1,6 +1,6 @@
 # KRAMA
 
-Red social ficticia KRAMA desarrollada para Programación Web y Diseño de Software.
+Red social ficticia KRAMA desarrollada como proyecto académico de Programación y Diseño.
 
 ## Estado actual
 Primera versión: HTML + CSS. La interactividad con JavaScript se agregará posteriormente.
