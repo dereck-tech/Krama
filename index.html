@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KRAMA, una red social para compartir ideas, momentos y personas.">
+    <title>KRAMA | Cada historia, Miles de sentimientos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header" id="inicio">
+        <div class="brand"><span class="brand-mark">✦</span><span class="brand-name">KRAMA</span></div>
+        <div class="search-box"><span>⌕</span><input type="search" placeholder="Buscar en KRAMA..." aria-label="Buscar en KRAMA"></div>
+        <div class="header-actions">
+            <a href="#inicio" class="header-icon" aria-label="Inicio">⌂</a>
+            <a href="#notificaciones" class="header-icon" aria-label="Notificaciones">♧</a>
+            <a href="#mensajes" class="header-icon" aria-label="Mensajes">▢</a>
+            <div class="mini-profile"><div class="avatar avatar-user">D</div><span>Dereck</span><span>⌄</span></div>
+        </div>
+    </header>
+
+    <div class="page-layout">
+        <aside class="sidebar">
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="#inicio" class="nav-item active"><span>⌂</span>Inicio</a>
+                <a href="#publicaciones" class="nav-item"><span>▤</span>Publicaciones</a>
+                <a href="#crear" class="nav-item"><span>＋</span>Crear publicación</a>
+                <a href="#perfil" class="nav-item"><span>●</span>Perfil</a>
+                <a href="#acerca" class="nav-item"><span>ⓘ</span>Acerca de</a>
+            </nav>
+            <section class="brand-card">
+                <div class="brand-card-image"></div>
+                <div class="brand-card-content"><h2>KRAMA</h2><p>Cada historia<br>Miles de sentimientos</p></div>
+            </section>
+            <div class="sidebar-decoration"><div class="mountains">⌁⌁⌁</div><p>Ideas · Momentos · Personas · Tú</p></div>
+        </aside>
+
+        <main class="main-content">
+            <section class="composer" id="crear">
+                <div class="composer-heading"><div class="avatar avatar-user">D</div><div><p class="composer-question">¿Qué tienes en mente, Dereck?</p><span>Comparte algo con KRAMA</span></div></div>
+                <form class="post-form">
+                    <label for="post-content" class="sr-only">Contenido</label>
+                    <textarea id="post-content" name="post-content" placeholder="Escribe tu publicación..." maxlength="500"></textarea>
+                    <div class="form-row">
+                        <label class="category-select" for="post-category"><span>◆</span><select id="post-category" name="post-category"><option>Categoría</option><option>Tecnología</option><option>Música</option><option>Deportes</option><option>Creatividad</option><option>Viajes</option><option>Otros</option></select></label>
+                        <button type="submit" class="publish-button">➤ &nbsp;Publicar</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="posts-section" id="publicaciones">
+                <div class="section-heading"><h1>Publicaciones</h1><label class="filter-select"><select aria-label="Filtrar publicaciones"><option>Todas las categorías</option><option>Tecnología</option><option>Música</option><option>Deportes</option><option>Creatividad</option><option>Viajes</option></select></label></div>
+                <div class="posts-list">
+
+                    <!-- Publicación de tecnología -->
+                    <article class="post-card">
+                        <div class="post-header">
+                            <div class="avatar avatar-mateo">M</div>
+                            <div class="author-info">
+                                <h2>Mateo Rojas</h2>
+                                <p>@mateorj · 2 h</p>
+                            </div>
+                            <span class="category-tag technology">Tecnología</span>
+                            <button class="more-button" aria-label="Más opciones">•••</button>
+                        </div>
+                        <div class="post-body">
+                            <p>Probando el nuevo Galaxy. Samsung sigue apostando por diseños más simples y pantallas que se sienten increíbles para el uso diario.</p>
+                            <img class="post-image" src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=1200&q=85" alt="Teléfono Samsung sobre una superficie de madera">
+                        </div>
+                        <div class="post-actions">
+                            <button aria-label="Me gusta">♥ <span>42</span></button>
+                            <button aria-label="Comentarios">▢ <span>7</span></button>
+                            <button aria-label="Compartir">⌁</button>
+                            <button class="bookmark" aria-label="Guardar publicación">♧</button>
+                        </div>
+                    </article>
+
+                    <!-- Publicación de música -->
+                    <article class="post-card">
+                        <div class="post-header">
+                            <div class="avatar avatar-sofia">S</div>
+                            <div class="author-info">
+                                <h2>Sofía Martínez</h2>
+                                <p>@sofimtz · 5 h</p>
+                            </div>
+                            <span class="category-tag music">Música</span>
+                            <button class="more-button" aria-label="Más opciones">•••</button>
+                        </div>
+                        <div class="post-body">
+                            <p>Hay días en los que una buena canción cambia por completo el ambiente. Esta es una de las que siempre termina acompañando mis tardes.</p>
+                            <img class="post-image" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=85" alt="Audífonos sobre una mesa de madera">
+                        </div>
+                        <div class="post-actions">
+                            <button aria-label="Me gusta">♥ <span>28</span></button>
+                            <button aria-label="Comentarios">▢ <span>5</span></button>
+                            <button aria-label="Compartir">⌁</button>
+                            <button class="bookmark" aria-label="Guardar publicación">♧</button>
+                        </div>
+                    </article>
+
+                    <!-- Publicación de deportes -->
+                    <article class="post-card">
+                        <div class="post-header">
+                            <div class="avatar avatar-andres">A</div>
+                            <div class="author-info">
+                                <h2>Andrés Silva</h2>
+                                <p>@andres.silva · 8 h</p>
+                            </div>
+                            <span class="category-tag sports">Deportes</span>
+                            <button class="more-button" aria-label="Más opciones">•••</button>
+                        </div>
+                        <div class="post-body">
+                            <p>Entrenamiento terminado. No todos los días salen como uno quiere, pero mantener la constancia termina haciendo la diferencia.</p>
+                            <img class="post-image" src="https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1200&q=85" alt="Persona nadando en una piscina">
+                        </div>
+                        <div class="post-actions">
+                            <button aria-label="Me gusta">♥ <span>56</span></button>
+                            <button aria-label="Comentarios">▢ <span>12</span></button>
+                            <button aria-label="Compartir">⌁</button>
+                            <button class="bookmark" aria-label="Guardar publicación">♧</button>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section class="hidden-section" id="perfil"><h1>Perfil</h1><p>Esta sección corresponde al perfil del usuario dentro de KRAMA.</p></section>
+            <section class="hidden-section" id="acerca"><h1>Acerca de KRAMA</h1><p>KRAMA es una red social ficticia creada para compartir ideas, momentos, intereses y experiencias.</p><ul><li>Publicaciones por categorías.</li><li>Espacio para crear publicaciones.</li><li>Perfil personal y navegación interna.</li></ul></section>
+        </main>
+
+        <aside class="right-column">
+            <section class="profile-card" id="perfil-card"><div class="profile-top"><div class="profile-avatar">D</div><div><h2>Dereck Rodríguez</h2><p>@dereck</p><span>Siempre en busca de mejores versiones.</span></div></div><a href="#perfil" class="edit-profile">Editar perfil</a></section>
+            <section class="side-card"><div class="side-card-title"><h2>◉ &nbsp;Categorías</h2><a href="#publicaciones">Ver todas</a></div><ul class="category-list"><li><i class="dot all"></i>Todas <strong>32</strong></li><li><i class="dot music-dot"></i>Música <strong>7</strong></li><li><i class="dot tech-dot"></i>Tecnología <strong>8</strong></li><li><i class="dot sports-dot"></i>Deportes <strong>5</strong></li><li><i class="dot creative-dot"></i>Creatividad <strong>6</strong></li><li><i class="dot travel-dot"></i>Viajes <strong>4</strong></li><li><i class="dot other-dot"></i>Otros <strong>2</strong></li></ul></section>
+            <section class="side-card trends-card" id="notificaciones"><h2>♨ &nbsp;Tendencias</h2><ol><li><strong>#Tecnología</strong><span>12.4K publicaciones</span></li><li><strong>#Música</strong><span>9.8K publicaciones</span></li><li><strong>#Viajes</strong><span>7.3K publicaciones</span></li><li><strong>#Creatividad</strong><span>5.6K publicaciones</span></li><li><strong>#Deportes</strong><span>4.2K publicaciones</span></li></ol></section>
+            <section class="side-card suggestions-card" id="mensajes"><div class="side-card-title"><h2>♙ &nbsp;Usuarios sugeridos</h2><a href="#perfil">Ver todos</a></div><div class="suggestion"><div class="avatar avatar-camila">C</div><div><strong>Camila Torres</strong><span>@camitorres</span></div><button>Seguir</button></div><div class="suggestion"><div class="avatar avatar-lucia">L</div><div><strong>Lucía Fernández</strong><span>@lufdez</span></div><button>Seguir</button></div><div class="suggestion"><div class="avatar avatar-mateo">M</div><div><strong>Mateo Rojas</strong><span>@mateorj</span></div><button>Seguir</button></div></section>
+        </aside>
+    </div>
+
+    <footer class="site-footer"><div><strong>KRAMA</strong><p>Conecta · Comparte · Inspira</p></div><nav><a href="#inicio">Inicio</a><a href="#publicaciones">Publicaciones</a><a href="#crear">Crear publicación</a><a href="#perfil">Perfil</a><a href="#acerca">Acerca de</a></nav><div class="social-icons"><span>◎</span><span>♪</span><span>▶</span><span>𝕏</span></div></footer>
+</body>
+</html>
