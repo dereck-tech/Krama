@@ -299,6 +299,7 @@ a {
     padding-left: 20px;
 }
 
+```css
 .suggestion {
     display: flex;
     align-items: center;
@@ -309,6 +310,11 @@ a {
 .suggestion .avatar {
     width: 35px;
     height: 35px;
+}
+
+.suggestion strong,
+.suggestion span {
+    display: block;
 }
 
 .suggestion button {
