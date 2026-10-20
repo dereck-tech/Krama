@@ -8,129 +8,131 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="encabezado" id="inicio">
-        <div class="marca">
-            <span class="marca-letra">K</span>
-            <span class="marca-nombre">KRAMA</span>
-        </div>
+<header class="encabezado" id="inicio">
+    <div class="marca">
+         <span class="marca-letra">K</span>
+         <span class="marca-nombre">KRAMA</span>
+     </div>
 
-        <div class="buscador">
-            <span class="icono-busqueda">⌕</span>
-            <input type="search" placeholder="Buscar en KRAMA" aria-label="Buscar en KRAMA">
-        </div>
+<div class="buscador">
+    <span class="icono-busqueda">⌕</span>
+    <input type="search" placeholder="Buscar en KRAMA" aria-label="Buscar en KRAMA">
+</div>
 
-        <div class="acciones-encabezado">
-            <a href="#inicio" class="icono-encabezado" aria-label="Inicio">⌂</a>
-            <a href="#notificaciones" class="icono-encabezado" aria-label="Notificaciones">♡</a>
-            <a href="#mensajes" class="icono-encabezado" aria-label="Mensajes">✉</a>
-            <div class="perfil-pequeno">
-                <div class="avatar avatar-usuario">D</div>
-                <span>Dereck</span>
-            </div>
-        </div>
-    </header>
+<div class="acciones-encabezado">
+    <a href="#inicio" class="icono-encabezado" aria-label="Inicio">⌂</a>
+    <a href="#notificaciones" class="icono-encabezado" aria-label="Notificaciones">♡</a>
+    <a href="#mensajes" class="icono-encabezado" aria-label="Mensajes">✉</a>
+<div class="perfil-pequeno">
+    <div class="avatar avatar-usuario">D</div>
+        <span>Dereck</span>
+     </div>
+</div>
+</header>
 
-    <div class="distribucion">
-        <aside class="menu-lateral">
-            <nav class="navegacion" aria-label="Navegación principal">
-                <a href="#inicio" class="enlace-menu activo">Inicio</a>
-                <a href="#publicaciones" class="enlace-menu">Publicaciones</a>
-                <a href="#crear" class="enlace-menu">Crear publicación</a>
-                <a href="#perfil" class="enlace-menu">Perfil</a>
-                <a href="#acerca" class="enlace-menu">Acerca de</a>
-            </nav>
-        </aside>
+<div class="distribucion">
+<aside class="menu-lateral">
+    <nav class="navegacion" aria-label="Navegación principal">
+        <a href="#inicio" class="enlace-menu activo">Inicio</a>
+        <a href="#publicaciones" class="enlace-menu">Publicaciones</a>
+        <a href="#crear" class="enlace-menu">Crear publicación</a>
+        <a href="#perfil" class="enlace-menu">Perfil</a>
+        <a href="#acerca" class="enlace-menu">Acerca de</a>
+        </nav>
+</aside>
 
-        <main class="contenido-principal">
-            <section class="bienvenida">
-                <p class="texto-pequeno">KRAMA</p>
-                <h1>Cada historia, miles de sentimientos</h1>
-                <p>Compartí lo que te nazca del corazón y encontrá más gente como vos.</p>
-            </section>
+<main class="contenido-principal">
+    <section class="bienvenida">
+        <p class="texto-pequeno">KRAMA</p>
+        <h1>Cada historia, miles de sentimientos</h1>
+        <p>Compartí lo que te nazca del corazón y encontrá más gente como vos.</p>
+    </section>
 
-            <section class="crear-publicacion" id="crear">
-                <div class="titulo-seccion">
-                    <div>
-                        <p class="texto-pequeno">Publicá lo que quieras</p>
-                        <h2>¿Qué querés compartir?</h2>
-                    </div>
-                </div>
+<section class="crear-publicacion" id="crear">
+<div class="titulo-seccion">
+    <div>
+        <p class="texto-pequeno">Publicá lo que quieras</p>
+        <h2>¿Qué querés compartir?</h2>
+    </div>
+</div>
 
-                <form id="formulario-publicacion">
-                    <input type="text" id="nombre-usuario" name="nombre-usuario" placeholder="Tu nombre" required>
-                    <textarea id="texto-publicacion" name="texto-publicacion" rows="4" placeholder="Escribí algo..." required></textarea>
+<form id="formulario-publicacion">
+    <input type="text" id="nombre-usuario" name="nombre-usuario" placeholder="Tu nombre" required>
+    <textarea id="texto-publicacion" name="texto-publicacion" rows="4" placeholder="Escribí algo..." required></textarea>
 
-                    <div class="fila-formulario">
-                        <select id="categoria-publicacion" name="categoria-publicacion" required>
-                            <option value="">Escogé una categoría</option>
-                            <option value="Tecnología">Tecnología</option>
-                            <option value="Música">Música</option>
-                            <option value="Deportes">Deportes</option>
-                            <option value="Arte">Arte</option>
-                            <option value="Otros">Otros</option>
-                        </select>
-                        <button type="submit" class="boton-publicar">Publicar</button>
-                    </div>
-                </form>
-            </section>
+<div class="fila-formulario">
+    <select id="categoria-publicacion" name="categoria-publicacion" required>
+        <option value="">Escogé una categoría</option>
+        <option value="Tecnología">Tecnología</option>
+        <option value="Música">Música</option>
+        <option value="Deportes">Deportes</option>
+        <option value="Arte">Arte</option>
+        <option value="Otros">Otros</option>
+    </select>
+<button type="submit" class="boton-publicar">Publicar</button>
+</div>
+</form>
 
-            <section id="publicaciones" class="seccion-publicaciones">
-                <div class="titulo-seccion">
-                    <div>
-                        <p class="texto-pequeno">Últimas publicaciones</p>
-                        <h2>Kramas</h2>
-                    </div>
+</section>
 
-                    <select id="filtro-categoria" aria-label="Filtrar publicaciones">
-                        <option value="Todas">Todas</option>
-                        <option value="Tecnología">Tecnología</option>
-                        <option value="Música">Música</option>
-                        <option value="Deportes">Deportes</option>
-                        <option value="Arte">Arte</option>
-                        <option value="Otros">Otros</option>
-                    </select>
-                </div>
+<section id="publicaciones" class="seccion-publicaciones">
+    <div class="titulo-seccion">
+<div>
+    <p class="texto-pequeno">Últimas publicaciones</p>
+    <h2>Kramas</h2>
+</div>
 
-                <div class="lista-publicaciones">
-                    <article class="tarjeta-publicacion">
-                        <div class="encabezado-publicacion">
-                            <div class="usuario-publicacion">
-                                <div class="avatar avatar-tecnologia">I</div>
-                                <div>
-                                    <h3>Isa Marcial</h3>
-                                    <p>@Isa</p>
-                                </div>
-                            </div>
-                            <span class="categoria-publicacion">Tecnología</span>
-                        </div>
+<select id="filtro-categoria" aria-label="Filtrar publicaciones">
+    <option value="Todas">Todas</option>
+    <option value="Tecnología">Tecnología</option>
+    <option value="Música">Música</option>
+    <option value="Deportes">Deportes</option>
+    <option value="Arte">Arte</option>
+    <option value="Otros">Otros</option>
+</select>
+</div>
 
-                        <div class="contenido-publicacion">
-                            <p>El nuevo Galaxy S21 promete ser uno de los teléfonos inteligentes del mercado. Samsung apuesta por una pantalla de alta calidad y un procesador potente.</p>
-                            <img class="imagen-publicacion" src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=1200&q=85" alt="Teléfono inteligente">
-                        </div>
+<div class="lista-publicaciones">
+    <article class="tarjeta-publicacion">
+<div class="encabezado-publicacion">
+<div class="usuario-publicacion">
+<div class="avatar avatar-tecnologia">I</div>
 
-                        <div class="acciones-publicacion">
-                            <button type="button">♡ 112.5 K</button>
-                            <button type="button">○ 40.5 K</button>
-                            <button type="button">Compartir</button>
-                            <button type="button">Guardar</button>
-                        </div>
-                    </article>
+<div>
+<h3>Isa Marcial</h3>
+<p>@Isa</p>
+</div>
+</div>
+<span class="categoria-publicacion">Tecnología</span>
+</div>
 
-                    <article class="tarjeta-publicacion">
-                        <div class="encabezado-publicacion">
-                            <div class="usuario-publicacion">
-                                <div class="avatar avatar-musica">A</div>
-                                <div>
-                                    <h3>Alexandra</h3>
-                                    <p>@Alexita</p>
-                                </div>
-                            </div>
-                            <span class="categoria-publicacion">Música</span>
-                        </div>
+<div class="contenido-publicacion">
+    <p>El nuevo Galaxy S21 promete ser uno de los teléfonos inteligentes del mercado. Samsung apuesta por una pantalla de alta calidad y un procesador potente.</p>
+    <img class="imagen-publicacion" src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=1200&q=85" alt="Teléfono inteligente">
+</div>
 
-                        <div class="contenido-publicacion">
-                            <p>Qué increíble es la música, que nos lleva a recordar experiencias hermosas. Gracias de verdad a quienes la crearon.</p>
+<div class="acciones-publicacion">
+    <button type="button">♡ 112.5 K</button>
+    <button type="button">○ 40.5 K</button>
+    <button type="button">Compartir</button>
+    <button type="button">Guardar</button>
+</div>
+</article>
+
+<article class="tarjeta-publicacion">
+     <div class="encabezado-publicacion">
+     <div class="usuario-publicacion">
+     <div class="avatar avatar-musica">A</div>
+<div>
+    <h3>Alexandra</h3>
+    <p>@Alexita</p>
+</div>
+</div>
+    <span class="categoria-publicacion">Música</span>
+</div>
+
+<div class="contenido-publicacion">
+    <p>Qué increíble es la música, que nos lleva a recordar experiencias hermosas. Gracias de verdad a quienes la crearon.</p>
                             <img class="imagen-publicacion" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=85" alt="Audífonos">
                         </div>
 
