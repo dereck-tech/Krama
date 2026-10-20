@@ -28,3 +28,4 @@ El proyecto cuenta con una estructura HTML y estilos CSS. La interactividad con 
 - Git
 
 **Eslogan:** «Cada historia, miles de sentimientos».
+Diseño del proyecto: interfaz visual con una paleta de tonos cálidos y tarjetas de publicaciones.
