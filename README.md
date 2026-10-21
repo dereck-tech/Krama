@@ -1,10 +1,10 @@
 # KRAMA
 
-KRAMA es una página web ficticia para compartir publicaciones y organizar el contenido por categorías.
+KRAMA es una página web para compartir publicaciones y ordenar el contenido por publicaciones.
 
 ## Estado actual
 
-El proyecto cuenta con una estructura HTML y estilos CSS. La interactividad con JavaScript se agregará en una etapa posterior.
+El proyecto tiene HTML y estilos CSS, más tarde se agregará JavaScript
 
 ## Características
 
@@ -28,4 +28,5 @@ El proyecto cuenta con una estructura HTML y estilos CSS. La interactividad con 
 - Git
 
 **Eslogan:** «Cada historia, miles de sentimientos».
+
 Diseño del proyecto: interfaz visual con una paleta de tonos cálidos y tarjetas de publicaciones.
