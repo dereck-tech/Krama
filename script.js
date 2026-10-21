@@ -270,6 +270,6 @@ document.querySelector("#perfil .boton-secundario").addEventListener("click", fu
         descripcion.textContent = descripcionNueva.trim();
     }
 });
-
+console.log("KRAMA ya funciona");
 mostrarPublicaciones();
 
