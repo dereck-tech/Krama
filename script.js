@@ -4,7 +4,7 @@ const publicaciones = [
         usuario: "Isa Marcial",
         categoria: "Tecnología",
         texto: "El nuevo Galaxy S21+ 5G apuesta por una pantalla de alta calidad, un procesador potente y excelentes cámaras.",
-        imagen: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=1200&q=85",
+        imagen: "imagenes/galaxyS21.webp",
         likes: 112500,
         comentarios: 40500,
         guardada: false,
@@ -16,7 +16,7 @@ const publicaciones = [
         usuario: "Alexandra",
         categoria: "Música",
         texto: "Qué increíble es la música, que nos lleva a recordar experiencias hermosas. Gracias a quienes la crearon.",
-        imagen: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=85",
+        imagen: "imagenes/Audifonos.avif",
         likes: 10000,
         comentarios: 5000,
         guardada: false,
@@ -28,7 +28,7 @@ const publicaciones = [
         usuario: "Coutí Kirkes",
         categoria: "Deportes",
         texto: "Terminé los 200 metros mariposa. Fue complicado y cansado, pero toca mantenernos firmes y seguir adelante.",
-        imagen: "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1200&q=85",
+        imagen: "imagenes/Mariposa.webp",
         likes: 12500,
         comentarios: 2500,
         guardada: false,
@@ -72,49 +72,49 @@ function mostrarPublicaciones() {
         return coincideCategoria && coincideBusqueda;
     });
 
-resultados.forEach(function (p) {
-    lista.innerHTML += `
-        <article class="tarjeta-publicacion">
-            <div class="encabezado-publicacion">
-                <div class="usuario-publicacion">
-                    <div class="avatar">${p.usuario[0]}</div>
-                    <div>
-                        <h3>${p.usuario}</h3>
-                        <p>@${p.usuario.toLowerCase().replace(/\s+/g, "")}</p>
+    resultados.forEach(function (p) {
+        lista.innerHTML += `
+            <article class="tarjeta-publicacion">
+                <div class="encabezado-publicacion">
+                    <div class="usuario-publicacion">
+                        <div class="avatar">${p.usuario[0]}</div>
+                        <div>
+                            <h3>${p.usuario}</h3>
+                            <p>@${p.usuario.toLowerCase().replace(/\s+/g, "")}</p>
+                        </div>
                     </div>
+                    <span class="categoria-publicacion">${p.categoria}</span>
                 </div>
-                <span class="categoria-publicacion">${p.categoria}</span>
-            </div>
 
-            <div class="contenido-publicacion">
-                <p>${p.texto}</p>
-                ${p.imagen ? `<img class="imagen-publicacion" src="${p.imagen}" alt="Imagen de la publicación">` : ""}
-            </div>
+                <div class="contenido-publicacion">
+                    <p>${p.texto}</p>
+                    ${p.imagen ? `<img class="imagen-publicacion" src="${p.imagen}" alt="Imagen de la publicación">` : ""}
+                </div>
 
-            <div class="acciones-publicacion">
-                <button onclick="darMeGusta(${p.id})">
-                    ${p.meGusta ? "♥ " : "♡ "}${formatoLikes(p.likes)}
-                </button>
+                <div class="acciones-publicacion">
+                    <button onclick="darMeGusta(${p.id})">
+                        ${p.meGusta ? "♥ " : "♡ "}${formatoLikes(p.likes)}
+                    </button>
 
-            <button onclick="verComentarios(${p.id})">
-                 ○ ${formatoLikes(p.comentarios)}
-            </button>
+                    <button onclick="verComentarios(${p.id})">
+                        ○ ${formatoLikes(p.comentarios)}
+                    </button>
 
-            <button onclick="compartirPublicacion(${p.id})">
-                ${p.compartida ? "Compartida" : "Compartir"}
-            </button>
+                    <button onclick="compartirPublicacion(${p.id})">
+                        ${p.compartida ? "Compartida" : "Compartir"}
+                    </button>
 
-            <button onclick="guardarPublicacion(${p.id})">
+                    <button onclick="guardarPublicacion(${p.id})">
                         ${p.guardada ? "Guardada" : "Guardar"}
-            </button>
+                    </button>
 
-            <button onclick="eliminarPublicacion(${p.id})">
-                Eliminar
-            </button>
-            </div>
-        </article>
-    `;
-});
+                    <button onclick="eliminarPublicacion(${p.id})">
+                        Eliminar
+                    </button>
+                </div>
+            </article>
+        `;
+    });
 
     if (resultados.length === 0) {
         lista.innerHTML = "<p>No se encontraron publicaciones.</p>";
@@ -151,7 +151,9 @@ formulario.addEventListener("submit", function (evento) {
     filtro.value = "Todas";
     buscador.value = "";
 
-    
+    mostrarPublicaciones();
+});
+
 document.querySelector('a[href="#notificaciones"]').addEventListener("click", function (evento) {
     evento.preventDefault();
     alert("No tienes ninguna notificación");
@@ -160,9 +162,6 @@ document.querySelector('a[href="#notificaciones"]').addEventListener("click", fu
 document.querySelector('a[href="#mensajes"]').addEventListener("click", function (evento) {
     evento.preventDefault();
     alert("No tienes mensajes (por el momento)");
-});
-
-    mostrarPublicaciones();
 });
 
 function darMeGusta(id) {
@@ -230,7 +229,7 @@ buscador.addEventListener("input", mostrarPublicaciones);
 
 document.querySelectorAll(".persona-sugerida button").forEach(function (boton) {
     boton.addEventListener("click", function () {
-        if (boton.textContent === "Seguir") {
+        if (boton.textContent.trim() === "Seguir") {
             boton.textContent = "Siguiendo";
         } else {
             boton.textContent = "Seguir";
@@ -255,7 +254,7 @@ document.querySelector("#perfil .boton-secundario").addEventListener("click", fu
         document.querySelector(".perfil-lateral h3").textContent = nombre;
         document.querySelector(".perfil-pequeno span").textContent = nombre.split(" ")[0];
         document.querySelector("#perfil .datos-perfil p:nth-of-type(2)").textContent =
-    "@" + nombre.toLowerCase().replace(/\s+/g, "");
+            "@" + nombre.toLowerCase().replace(/\s+/g, "");
         document.querySelector(".perfil-pequeno .avatar").textContent = nombre[0].toUpperCase();
         document.querySelector("#perfil .avatar-grande").textContent = nombre[0].toUpperCase();
     }
@@ -270,6 +269,6 @@ document.querySelector("#perfil .boton-secundario").addEventListener("click", fu
         descripcion.textContent = descripcionNueva.trim();
     }
 });
+
 console.log("KRAMA ya funciona");
 mostrarPublicaciones();
-
